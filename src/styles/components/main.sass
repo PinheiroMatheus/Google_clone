@@ -1,0 +1,50 @@
+@use '../variables'
+@use '../mixins'
+
+.main
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 1.5rem
+    background-color: variables.$backgroud-color
+    padding: 5rem
+
+    .input-box
+        border: 1px solid variables.$text-footer-color
+        border-radius: 25px
+        display: grid
+        grid-template-columns: 5% 74% 5% 5% 5%
+        gap: 2%
+        font-size: 1.2rem
+        color: variables.$text-footer-color
+        padding: 0.8rem 1rem
+        max-width: 800px
+        width: 100%
+
+        .main-input
+            border: none
+            background-color: variables.$backgroud-color
+            color: #fff
+
+        :focus
+            border: none
+            background: none
+            color: #fff
+
+        .input-icon
+            color: variables.$text-footer-color
+            display: flex
+
+        .end-icons
+            display: flex            
+
+    .buttons
+        display: flex
+        gap: 0.7rem
+
+        a
+            @include mixins.main-button
+
+        :hover
+            border: 1px solid variables.$border-color

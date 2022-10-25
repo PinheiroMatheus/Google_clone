@@ -1,0 +1,27 @@
+@use '../variables'
+    
+.header
+    display: flex
+    justify-content: end
+    gap: 1rem
+    background-color: variables.$backgroud-color
+    padding: 1.2rem
+
+    a
+        text-decoration: none
+        font-family: Arial
+        font-size: 13px
+        color: #fff
+        display: flex
+        align-items: center
+
+        .grid-dots
+            font-size: 1.5rem
+
+    :hover
+        text-decoration: underline
+
+        >.image-link
+            background-color: variables.$hover-backgroud-color
+            border-radius: 50%
+

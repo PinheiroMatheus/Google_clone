@@ -1,0 +1,50 @@
+@use '../variables'
+@use '../mixins'
+
+.footer
+    display: flex
+    flex-direction: column
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+
+    .first-line
+        display: grid
+        grid-template-columns: 100%
+        padding: 1rem 2rem
+        background-color: variables.$footer-backgroud-color
+        border-bottom: 0.1px solid variables.$text-footer-color
+        color: variables.$text-footer-color
+        font-size: 14px
+
+        span
+            padding: 1%
+
+        @media ( max-width: 1000px )
+            font-size: 10px
+            
+
+    .second-line
+        display: grid
+        grid-template-columns: 60% 40%
+        padding: 1rem 2rem
+        color: variables.$text-footer-color
+        font-size: 14px
+        background-color: variables.$footer-backgroud-color
+
+        .block-1
+            display: flex
+            justify-content: start
+
+            span
+                padding: 1%
+        
+        .block-2
+            display: flex
+            justify-content: flex-end
+            span
+                padding: 1%
+
+        @media ( max-width: 1000px )
+            font-size: 10px
